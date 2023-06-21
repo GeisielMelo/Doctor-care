@@ -22,6 +22,20 @@ section {
   margin: 0 auto;
 }
 
+// Custom scroll bar
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #DDDDDD;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00856f;
+    border-radius: 4px;
+}
+
 `;
 
 export default GlobalStyle;
