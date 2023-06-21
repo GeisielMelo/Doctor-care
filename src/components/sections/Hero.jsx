@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import woman from "../../images/woman.png";
-import whatsapp from "../../images/whatsapp.png";
+import { WhatsAppIcon } from "../Icons";
+import Button from "../Button";
 
 const StyledSection = styled.section`
   background: #dce9e2;
@@ -66,31 +67,6 @@ const StyledP = styled.p`
   font-size: clamp(14px, 5vw, 16px);
   line-height: 150%;
   color: #495057;
-  margin-bottom: 32px;
-`;
-
-const StyledButton = styled.button`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  padding: 16px 32px;
-  background: #00856f;
-  border-radius: 40px;
-
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #ffffff;
-`;
-
-const StyledWhatsApp = styled.img`
-  width: 20px;
-  height: 20px;
-  margin-right: 16px;
 `;
 
 const Hero = () => {
@@ -104,10 +80,9 @@ const Hero = () => {
             Os médicos da DoctorCare vão além dos sintomas para tratar a causa
             raiz de sua doença e proporcionar uma cura a longo prazo.
           </StyledP>
-          <StyledButton>
-            <StyledWhatsApp src={whatsapp} alt="whatsapp icon" /> Agende sua
-            consulta
-          </StyledButton>
+          <Button>
+            <WhatsAppIcon /> Agende sua consulta
+          </Button>
         </StyledHeroText>
         <StyledHeroImage src={woman} alt="woman in a green blouse" />
       </StyledHero>
