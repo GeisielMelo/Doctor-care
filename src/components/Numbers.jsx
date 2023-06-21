@@ -10,7 +10,7 @@ const StyledDiv = styled.div`
   justify-content: space-around;
   align-items: center;
 
-  max-width: 1120px;
+  max-width: 1050px;
   background: #fffaf1;
   border: 1px solid #dce9e2;
   border-radius: 6px;
@@ -18,7 +18,7 @@ const StyledDiv = styled.div`
 
   @media (max-width: 991px) {
     flex-direction: column;
-    margin: 0 24px;
+    max-width: 330px;
   }
 `;
 
