@@ -2,6 +2,7 @@ import styled from "styled-components";
 import whatsapp from "../images/whatsapp.png";
 import pin from "../images/pin.png";
 import mail from "../images/mail.png";
+import check from "../images/check.png";
 
 const WhatsApp = styled.img`
   width: 20px;
@@ -21,6 +22,11 @@ const Pin = styled.img`
   margin-right: 8px;
 `;
 
+const Check = styled.img`
+  width: 25px;
+  height: 25px;
+`;
+
 export const WhatsAppIcon = () => {
   return <WhatsApp src={whatsapp} />;
 };
@@ -31,4 +37,8 @@ export const MailIcon = () => {
 
 export const PinIcon = () => {
   return <Pin src={pin} />;
+};
+
+export const CheckIcon = () => {
+  return <Check src={check} />;
 };
