@@ -10,37 +10,39 @@ const StyledSection = styled.section`
 
 const StyledHero = styled.div`
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 0 20px;
   }
 `;
 
 const StyledHeroText = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex: 1 1 42rem;
   max-width: 605px;
-  left: 123px;
-  top: 152px;
-  margin: 80px 0;
 
-  @media (max-width: 768px) {
-    text-align: center;
+  @media (max-width: 991px) {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 0px 20px;
+    justify-content: center;
   }
 `;
 
 const StyledHeroImage = styled.img`
-  max-width: 400px;
-  max-height: 500px;
+  flex: 1 1 42rem;
+  max-width: 420px;
 `;
 
 const StyledH1 = styled.h1`
+  max-width: 585px;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -50,15 +52,11 @@ const StyledH1 = styled.h1`
 `;
 
 const StyledH2 = styled.h2`
-  max-width: 605px;
-  max-height: 136px;
-
   font-style: normal;
   font-weight: 700;
-  font-size: clamp(2.1rem, 5vw, 3.1rem);
+  font-size: clamp(34px, 3vw, 52px);
   line-height: 130%;
   color: #212529;
-
   margin-top: 16px;
   margin-bottom: 24px;
 `;
@@ -79,14 +77,12 @@ const StyledButton = styled.button`
   align-items: center;
 
   padding: 16px 32px;
-  gap: 16px;
   background: #00856f;
   border-radius: 40px;
-  border: none;
 
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 18px;
   text-transform: uppercase;
   color: #ffffff;
@@ -95,6 +91,7 @@ const StyledButton = styled.button`
 const StyledWhatsApp = styled.img`
   width: 20px;
   height: 20px;
+  margin-right: 16px;
 `;
 
 const Hero = () => {
