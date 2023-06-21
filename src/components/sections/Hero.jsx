@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Numbers from "../Numbers";
 import woman from "../../images/woman.png";
 import whatsapp from "../../images/whatsapp.png";
 
