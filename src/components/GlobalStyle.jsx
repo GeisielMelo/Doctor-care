@@ -18,15 +18,8 @@ html {
 }
 
 section {
-  padding: 0px 100px;
-
-  @media (max-width: 992px) {
-    padding: 0px 50px;
-  };
-
-  @media (max-width: 768px) {
-    padding: 0;
-  };
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 `;
