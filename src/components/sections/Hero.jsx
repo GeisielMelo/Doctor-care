@@ -36,22 +36,15 @@ const StyledHeroText = styled.div`
 `;
 
 const StyledHeroImage = styled.img`
-  max-width: 420px;
-  height: 547px;
-  background: #dce9e2;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+  max-width: 400px;
+  max-height: 500px;
 `;
 
 const StyledH1 = styled.h1`
-  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 150%;
-
   letter-spacing: 0.08em;
   color: #00856f;
 `;
@@ -59,12 +52,10 @@ const StyledH1 = styled.h1`
 const StyledH2 = styled.h2`
   max-width: 605px;
   max-height: 136px;
-  overflow: hidden;
 
-  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
-  font-size: clamp(34px, 5vw, 52px);
+  font-size: clamp(2.1rem, 5vw, 3.1rem);
   line-height: 130%;
   color: #212529;
 
@@ -73,7 +64,6 @@ const StyledH2 = styled.h2`
 `;
 
 const StyledP = styled.p`
-  font-family: "DM Sans";
   font-style: normal;
   font-weight: 400;
   font-size: clamp(14px, 5vw, 16px);
@@ -94,7 +84,6 @@ const StyledButton = styled.button`
   border-radius: 40px;
   border: none;
 
-  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -126,7 +115,6 @@ const Hero = () => {
         </StyledHeroText>
         <StyledHeroImage src={woman} alt="woman in a green blouse" />
       </StyledHero>
-      <Numbers />
     </StyledSection>
   );
 };
