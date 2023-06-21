@@ -2,19 +2,23 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
+  position: relative;
+  bottom: 50px;
+  margin: 0 auto;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  max-width: 1120px;
   background: #fffaf1;
   border: 1px solid #dce9e2;
   border-radius: 6px;
   padding: 60px 120px;
-  margin: 0px 100px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     flex-direction: column;
-
-    margin: 0px 24px;
+    margin: 0 24px;
   }
 `;
 
@@ -26,7 +30,6 @@ const StyledNumbers = styled.div`
 `;
 
 const Number = styled.h1`
-  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -35,7 +38,6 @@ const Number = styled.h1`
 `;
 
 const Description = styled.p`
-  font-family: "DM Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -49,7 +51,7 @@ const Divider = styled.div`
   width: 1px;
   margin: 0 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     border: none;
   }
 `;
