@@ -8,7 +8,7 @@ const StyledSection = styled.section`
   background: #dce9e2;
 `;
 
-const StyledHero = styled.div`
+const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,7 +24,7 @@ const StyledHero = styled.div`
   }
 `;
 
-const StyledHeroText = styled.div`
+const Content = styled.div`
   flex: 1 1 42rem;
   max-width: 605px;
 
@@ -36,12 +36,12 @@ const StyledHeroText = styled.div`
   }
 `;
 
-const StyledHeroImage = styled.img`
+const Image = styled.img`
   flex: 1 1 42rem;
   max-width: 420px;
 `;
 
-const StyledH1 = styled.h1`
+const Title = styled.h1`
   max-width: 585px;
   font-style: normal;
   font-weight: 700;
@@ -51,7 +51,7 @@ const StyledH1 = styled.h1`
   color: #00856f;
 `;
 
-const StyledH2 = styled.h2`
+const Subtitle = styled.h2`
   font-style: normal;
   font-weight: 700;
   font-size: clamp(34px, 3vw, 52px);
@@ -61,7 +61,7 @@ const StyledH2 = styled.h2`
   margin-bottom: 24px;
 `;
 
-const StyledP = styled.p`
+const Description = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: clamp(14px, 5vw, 16px);
@@ -72,20 +72,20 @@ const StyledP = styled.p`
 const Hero = () => {
   return (
     <StyledSection>
-      <StyledHero>
-        <StyledHeroText>
-          <StyledH1>BOAS-VINDAS A DOCTORCARE 👋</StyledH1>
-          <StyledH2>Assistência médica simplificada para todos</StyledH2>
-          <StyledP>
+      <Container>
+        <Content>
+          <Title>BOAS-VINDAS A DOCTORCARE 👋</Title>
+          <Subtitle>Assistência médica simplificada para todos</Subtitle>
+          <Description>
             Os médicos da DoctorCare vão além dos sintomas para tratar a causa
             raiz de sua doença e proporcionar uma cura a longo prazo.
-          </StyledP>
+          </Description>
           <Button>
             <WhatsAppIcon /> Agende sua consulta
           </Button>
-        </StyledHeroText>
-        <StyledHeroImage src={woman} alt="woman in a green blouse" />
-      </StyledHero>
+        </Content>
+        <Image src={woman} alt="woman in a green blouse" />
+      </Container>
     </StyledSection>
   );
 };
