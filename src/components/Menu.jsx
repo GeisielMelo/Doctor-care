@@ -49,7 +49,7 @@ const Item = styled.li`
   cursor: pointer;
   color: #ffffff;
   
-  a:visited {
+  a {
   color: inherit;
 }
 `;
