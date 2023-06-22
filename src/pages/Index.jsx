@@ -5,10 +5,12 @@ import Services from "../components/sections/Services";
 import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
 import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 
 const Index = () => {
   return (
     <>
+      <Nav />
       <Hero />
       <Numbers />
       <Services />
