@@ -1,44 +1,49 @@
 import styled from "styled-components";
 import whatsapp from "../images/whatsapp.png";
-import pin from "../images/pin.png";
 import mail from "../images/mail.png";
+import pin from "../images/pin.png";
 import check from "../images/check.png";
+import instagram from "../images/instagram.png";
+import facebook from "../images/facebook.png";
+import youtube from "../images/youtube.png";
 
-const WhatsApp = styled.img`
-  width: 20px;
-  height: 20px;
+const Default = styled.img`
+  width: 25px;
+  height: 25px;
+`;
+
+const SmallDefault = styled(Default)`
+  margin-right: 8px;
+`;
+
+const MediumDefault = styled(Default)`
   margin-right: 16px;
 `;
 
-const Mail = styled.img`
-  width: 25px;
-  height: 25px;
-  margin-right: 8px;
-`;
-
-const Pin = styled.img`
-  width: 25px;
-  height: 25px;
-  margin-right: 8px;
-`;
-
-const Check = styled.img`
-  width: 25px;
-  height: 25px;
-`;
-
 export const WhatsAppIcon = () => {
-  return <WhatsApp src={whatsapp} />;
+  return <MediumDefault src={whatsapp} />;
 };
 
 export const MailIcon = () => {
-  return <Mail src={mail} />;
+  return <SmallDefault src={mail} />;
 };
 
 export const PinIcon = () => {
-  return <Pin src={pin} />;
+  return <SmallDefault src={pin} />;
 };
 
 export const CheckIcon = () => {
-  return <Check src={check} />;
+  return <Default src={check} />;
+};
+
+export const InstagramIcon = () => {
+  return <Default src={instagram} />;
+};
+
+export const FacebookIcon = () => {
+  return <Default src={facebook} />;
+};
+
+export const YoutubeIcon = () => {
+  return <Default src={youtube} />;
 };
