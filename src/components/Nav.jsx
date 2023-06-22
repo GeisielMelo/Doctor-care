@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import Button from "./Button";
 import GreenMenu from "../images/GreenMenu.png";
+import Menu from "./Menu"
 
 const NavBar = styled.nav`
   display: flex;
@@ -20,7 +21,7 @@ const Container = styled.div`
   width: 100%;
 `;
 
-const Menu = styled.ul`
+const List = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,25 +80,30 @@ const Nav = () => {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <NavBar>
       {isMobile === false ? (
         <Container>
           <Logo />
-          <Menu>
+          <List>
             <Item>Inicio</Item>
             <Item>Sobre</Item>
             <Item>Serviços</Item>
             <Item>Depoimentos</Item>
-          </Menu>
+          </List>
           <Button>Agendar consulta</Button>
         </Container>
       ) : (
         <Container>
           <Logo />
-          <HamburgerMenu onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <HamburgerMenu onClick={toggleMenu}>
             <img src={GreenMenu} alt="" />
           </HamburgerMenu>
+          {isMenuOpen && <Menu />}
         </Container>
       )}
     </NavBar>
