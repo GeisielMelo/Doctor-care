@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { YoutubeIcon, InstagramIcon, FacebookIcon } from "./Icons";
+import { instagramUrl, facebookUrl, youTubeUrl } from "../utils/MediaLinks";
 
 const Container = styled.div`
   display: flex;
@@ -19,13 +20,13 @@ const Button = styled.button`
 const Media = () => {
   return (
     <Container>
-      <Button>
+      <Button onClick={() => instagramUrl("https://github.com/GeisielMelo")}>
         <InstagramIcon />
-      </Button>
-      <Button>
+      </Button >
+      <Button onClick={() => facebookUrl("https://github.com/GeisielMelo")}>
         <FacebookIcon />
       </Button>
-      <Button>
+      <Button onClick={() => youTubeUrl("https://github.com/GeisielMelo")}>
         <YoutubeIcon />
       </Button>
     </Container>
