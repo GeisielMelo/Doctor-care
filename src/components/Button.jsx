@@ -16,7 +16,6 @@ const Button = styled.button`
   line-height: 18px;
   text-transform: uppercase;
   color: #ffffff;
-  margin-top: 40px;
   cursor: pointer;
 `;
 
