@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { YoutubeIcon, InstagramIcon, FacebookIcon } from "./Icons";
 import Logo from "./Logo";
+import Media from "./Media";
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -14,26 +14,14 @@ const StyledFooter = styled.footer`
   @media (max-width: 991px) {
     align-items: flex-start;
     flex-direction: column;
+    padding: 80px 20px;
   }
 `;
 
-const Content = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-`;
-
-const Media = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-`;
-
-const Button = styled.button`
-  border: none;
-  background-color: transparent;
-  margin-right: 32px;
-  cursor: pointer;
 `;
 
 const Copyright = styled.h2`
@@ -48,22 +36,12 @@ const Copyright = styled.h2`
 const Footer = () => {
   return (
     <StyledFooter>
-      <Content>
+      <Container>
         <Logo />
         <Copyright>©2022 - DoctorCare.</Copyright>
         <Copyright>Todos os direitos reservados.</Copyright>
-      </Content>
-      <Media>
-        <Button>
-          <InstagramIcon />
-        </Button>
-        <Button>
-          <FacebookIcon />
-        </Button>
-        <Button>
-          <YoutubeIcon />
-        </Button>
-      </Media>
+      </Container>
+      <Media />
     </StyledFooter>
   );
 };
