@@ -6,6 +6,7 @@ import check from "../images/check.png";
 import instagram from "../images/instagram.png";
 import facebook from "../images/facebook.png";
 import youtube from "../images/youtube.png";
+import close from "../images/close.png";
 
 const Default = styled.img`
   width: 25px;
@@ -46,4 +47,8 @@ export const FacebookIcon = () => {
 
 export const YoutubeIcon = () => {
   return <Default src={youtube} />;
+};
+
+export const CloseIcon = () => {
+  return <Default src={close} />;
 };
