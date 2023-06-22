@@ -16,6 +16,7 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   background: #F7F9F9;
+  scroll-behavior: smooth;
 }
 
 section {
