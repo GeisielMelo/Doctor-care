@@ -67,6 +67,7 @@ const Description = styled.p`
   font-size: clamp(14px, 5vw, 16px);
   line-height: 150%;
   color: #495057;
+  margin-bottom: 32px;
 `;
 
 const Hero = () => {
