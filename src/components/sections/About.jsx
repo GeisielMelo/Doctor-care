@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../Button";
-import { WhatsAppIcon, PinIcon, MailIcon } from "../Icons";
 import doctor from "../../images/doctor.jpg";
 
 const StyledSection = styled.section`
@@ -79,7 +77,7 @@ const Description = styled.p`
 
 const About = () => {
   return (
-    <StyledSection>
+    <StyledSection id="about">
       <Container>
         <Content>
           <Title>SOBRE NÓS</Title>

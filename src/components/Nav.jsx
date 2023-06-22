@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import Button from "./Button";
 import GreenMenu from "../images/GreenMenu.png";
-import Menu from "./Menu"
+import Menu from "./Menu";
 
 const NavBar = styled.nav`
   display: flex;
@@ -56,6 +56,10 @@ const Item = styled.li`
   &.selected::after {
     background-color: #f00;
   }
+  
+  a:visited {
+    color: inherit;
+  }
 `;
 
 const HamburgerMenu = styled.button`
@@ -85,15 +89,15 @@ const Nav = () => {
   };
 
   return (
-    <NavBar>
+    <NavBar id="home">
       {isMobile === false ? (
         <Container>
           <Logo />
           <List>
-            <Item>Inicio</Item>
-            <Item>Sobre</Item>
-            <Item>Serviços</Item>
-            <Item>Depoimentos</Item>
+            <Item><a href="#home">Inicio</a></Item>
+            <Item><a href="#about">Sobre</a></Item>
+            <Item><a href="#services">Serviços</a></Item>
+            <Item><a href="#contact">Depoimentos</a></Item>
           </List>
           <Button>Agendar consulta</Button>
         </Container>
@@ -103,7 +107,7 @@ const Nav = () => {
           <HamburgerMenu onClick={toggleMenu}>
             <img src={GreenMenu} alt="" />
           </HamburgerMenu>
-          {isMenuOpen && <Menu />}
+          {isMenuOpen && <Menu closeMenu={() => setIsMenuOpen(false)} />}
         </Container>
       )}
     </NavBar>

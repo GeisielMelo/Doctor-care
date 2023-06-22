@@ -42,7 +42,7 @@ const Subtitle = styled.h2`
 
 const Services = () => {
   return (
-    <StyledSection>
+    <StyledSection id="services">
       <Title>SERVIÇOS</Title>
       <Subtitle>Como podemos ajudá-lo a se sentir melhor?</Subtitle>
       <Container>

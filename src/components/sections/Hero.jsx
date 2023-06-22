@@ -72,7 +72,7 @@ const Description = styled.p`
 
 const Hero = () => {
   return (
-    <StyledSection>
+    <StyledSection id="hero">
       <Container>
         <Content>
           <Title>BOAS-VINDAS A DOCTORCARE 👋</Title>

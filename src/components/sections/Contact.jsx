@@ -62,7 +62,7 @@ const Address = styled.p`
 
 const Contact = () => {
   return (
-    <StyledSection>
+    <StyledSection id="contact">
       <Container>
         <Content>
           <Title>Entre em contato com a gente!</Title>
