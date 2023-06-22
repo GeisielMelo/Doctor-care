@@ -17,6 +17,7 @@ const Button = styled.button`
   text-transform: uppercase;
   color: #ffffff;
   margin-top: 40px;
+  cursor: pointer;
 `;
 
 export default Button;
