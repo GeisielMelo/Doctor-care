@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import Button from "./Button";
 import GreenMenu from "../images/GreenMenu.png";
 import Menu from "./Menu";
+import WhatsAppLink from "../utils/WhatsAppLink"
 
 const NavBar = styled.nav`
   display: flex;
@@ -11,6 +12,15 @@ const NavBar = styled.nav`
   align-items: center;
   height: 70px;
   padding: 0 20px;
+  background-color: #dce9e2;
+  transition: top 0.2s ease;
+  z-index: 1;
+
+  ${(props) => props.navPos && `position: ${props.navPos};`}
+  ${(props) => props.navTop && `top: ${props.navTop};`}
+  ${(props) => props.backGroundColor && `background-color: ${props.backGroundColor};`}
+  left: 0;
+  right: 0;
 `;
 
 const Container = styled.div`
@@ -53,12 +63,9 @@ const Item = styled.li`
     background-color: #000;
   }
 
-  &.selected::after {
-    background-color: #f00;
-  }
-  
-  a:visited {
+  a {
     color: inherit;
+    ${(props) => props.textColor && `color: ${props.textColor};`}
   }
 `;
 
@@ -68,7 +75,7 @@ const HamburgerMenu = styled.button`
   cursor: pointer;
 `;
 
-const Nav = () => {
+const Nav = ({ navPos, navTop, backgroundColor, textColor, borderColor }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -89,21 +96,30 @@ const Nav = () => {
   };
 
   return (
-    <NavBar id="home">
+    <NavBar
+      navPos={navPos}
+      navTop={navTop}
+      backGroundColor={backgroundColor}
+      textColor={textColor}
+      borderColor={borderColor}
+    >
       {isMobile === false ? (
         <Container>
-          <Logo />
+          <Logo colorOne={textColor} colorTwo={textColor} />
           <List>
-            <Item><a href="#home">Inicio</a></Item>
+            <Item><a href="#hero">Inicio</a></Item>
             <Item><a href="#about">Sobre</a></Item>
             <Item><a href="#services">Serviços</a></Item>
             <Item><a href="#contact">Depoimentos</a></Item>
           </List>
-          <Button>Agendar consulta</Button>
+          <Button onClick={WhatsAppLink}
+            style={{borderColor: `${borderColor}` }}>
+            Agendar consulta
+          </Button>
         </Container>
       ) : (
         <Container>
-          <Logo />
+          <Logo colorOne={textColor} colorTwo={textColor} />
           <HamburgerMenu onClick={toggleMenu}>
             <img src={GreenMenu} alt="" />
           </HamburgerMenu>
