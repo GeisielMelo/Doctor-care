@@ -3,6 +3,8 @@ import styled from "styled-components";
 import woman from "../../images/woman.png";
 import { WhatsAppIcon } from "../Icons";
 import Button from "../Button";
+import Nav from "../Nav";
+import WhatsAppLink from "../../utils/WhatsAppLink";
 
 const StyledSection = styled.section`
   background: #dce9e2;
@@ -73,6 +75,7 @@ const Description = styled.p`
 const Hero = () => {
   return (
     <StyledSection id="hero">
+      <Nav navPos="static"/>
       <Container>
         <Content>
           <Title>BOAS-VINDAS A DOCTORCARE 👋</Title>
@@ -81,7 +84,7 @@ const Hero = () => {
             Os médicos da DoctorCare vão além dos sintomas para tratar a causa
             raiz de sua doença e proporcionar uma cura a longo prazo.
           </Description>
-          <Button>
+          <Button onClick={WhatsAppLink}>
             <WhatsAppIcon /> Agende sua consulta
           </Button>
         </Content>

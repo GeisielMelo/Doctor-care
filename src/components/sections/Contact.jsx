@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "../Button";
 import { WhatsAppIcon, PinIcon, MailIcon } from "../Icons";
 import man from "../../images/man.jpg";
+import WhatsAppLink from "../../utils/WhatsAppLink";
 
 const StyledSection = styled.section`
   background: none;
@@ -74,7 +75,7 @@ const Contact = () => {
             <MailIcon />
             contato@doctorcare.com
           </Address>
-          <Button>
+          <Button onClick={WhatsAppLink}>
             <WhatsAppIcon />
             Agende sua consulta
           </Button>
