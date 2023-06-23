@@ -8,7 +8,7 @@ DoctorCare is a modern and responsive landing page developed in React for a fict
 
 ## Deploy
 
-[Demo](https://vercel.com/geisielmelo/doctor-care) hosted with  [Vercel](https://vercel.com/).
+[Demo](https://doctor-care-rust.vercel.app/) hosted with  [Vercel](https://vercel.com/).
 
 ## Features
 
